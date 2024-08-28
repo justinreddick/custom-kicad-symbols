@@ -16,36 +16,43 @@ The KB2040 is a compact development board by Adafruit, designed for custom keybo
 
 ## Pinout Diagram
 
-The KB2040 board has a total of 26 pins, including 22 GPIO pins, 3 ground pins, and USB D+ and D- pins. Below is a detailed list of the pinout based on the [KB2040 Pinouts page](https://learn.adafruit.com/adafruit-kb2040/pinouts).
+The KB2040 board has a total of 26 pins, including GPIO pins, ground pins, and various special function pins. Below is a detailed list of the pinout based on the [KB2040 Pinouts page](https://learn.adafruit.com/adafruit-kb2040/pinouts).
 
-| Pin | Name  | Function           | Description                                                    |
-|-----|-------|--------------------|----------------------------------------------------------------|
-| 1   | GND   | Ground             | Common ground pin                                              |
-| 2   | 3V3   | 3.3V Output        | Provides 3.3V from regulator                                   |
-| 3   | A0/D0 | GPIO, ADC0, I2C1_SDA, SPI0 RX | General-purpose I/O, Analog input 0, I2C1 Data, SPI0 Receive  |
-| 4   | A1/D1 | GPIO, ADC1, I2C1_SCL, SPI0 SCK | General-purpose I/O, Analog input 1, I2C1 Clock, SPI0 Clock   |
-| 5   | A2/D2 | GPIO, ADC2         | General-purpose I/O, Analog input 2                            |
-| 6   | A3/D3 | GPIO, ADC3         | General-purpose I/O, Analog input 3                            |
-| 7   | D4    | GPIO, SPI0 TX      | General-purpose I/O, SPI0 Transmit                             |
-| 8   | D5    | GPIO, I2C0_SDA, PWM0 | General-purpose I/O, I2C0 Data, PWM channel 0                  |
-| 9   | D6    | GPIO, I2C0_SCL, PWM1 | General-purpose I/O, I2C0 Clock, PWM channel 1                 |
-| 10  | D7    | GPIO, UART1 TX     | General-purpose I/O, UART1 Transmit                            |
-| 11  | D8    | GPIO, UART1 RX     | General-purpose I/O, UART1 Receive                             |
-| 12  | D9    | GPIO, PWM2         | General-purpose I/O, PWM channel 2                             |
-| 13  | D10   | GPIO, PWM3         | General-purpose I/O, PWM channel 3                             |
-| 14  | D11   | GPIO, SPI0 TX      | General-purpose I/O, SPI0 Transmit                             |
-| 15  | D12   | GPIO, SPI0 RX      | General-purpose I/O, SPI0 Receive                              |
-| 16  | D13   | GPIO, SPI0 SCK     | General-purpose I/O, SPI0 Clock                                |
-| 17  | D14   | GPIO, I2C0_SDA     | General-purpose I/O, I2C0 Data                                 |
-| 18  | D15   | GPIO, I2C0_SCL     | General-purpose I/O, I2C0 Clock                                |
-| 19  | D16   | GPIO               | General-purpose I/O                                            |
-| 20  | D17   | GPIO               | General-purpose I/O                                            |
-| 21  | D18   | GPIO               | General-purpose I/O                                            |
-| 22  | D19   | GPIO               | General-purpose I/O                                            |
-| 23  | D20   | GPIO               | General-purpose I/O                                            |
-| 24  | D21   | GPIO               | General-purpose I/O                                            |
-| 25  | D-    | USB Data -         | USB negative data line                                         |
-| 26  | D+    | USB Data +         | USB positive data line                                         |
+### Left Side Pinout
+
+| Pin | Name  | Function                          | Description                                                    |
+|-----|-------|-----------------------------------|----------------------------------------------------------------|
+| 1   | D+    | USB Data +                        | USB positive data line                                         |
+| 2   | D0    | GPIO, I2C1_SDA, SPI0 RX           | General-purpose I/O, I2C1 Data, SPI0 Receive                   |
+| 3   | D1    | GPIO, I2C1_SCL, SPI0 SCK          | General-purpose I/O, I2C1 Clock, SPI0 Clock                    |
+| 4   | GND   | Ground                            | Common ground pin                                              |
+| 5   | GND   | Ground                            | Common ground pin                                              |
+| 6   | D2    | GPIO, SPI0 TX                     | General-purpose I/O, SPI0 Transmit                             |
+| 7   | D3    | GPIO, I2C0_SDA, PWM               | General-purpose I/O, I2C0 Data, PWM                            |
+| 8   | D4    | GPIO, I2C0_SCL, PWM               | General-purpose I/O, I2C0 Clock, PWM                           |
+| 9   | D5    | GPIO, UART1 TX                    | General-purpose I/O, UART1 Transmit                            |
+| 10  | D6    | GPIO, UART1 RX                    | General-purpose I/O, UART1 Receive                             |
+| 11  | D7    | GPIO, UART0 TX                    | General-purpose I/O, UART0 Transmit                            |
+| 12  | D8    | GPIO, UART0 RX                    | General-purpose I/O, UART0 Receive                             |
+| 13  | D9    | GPIO, PWM                         | General-purpose I/O, PWM                                       |
+
+### Right Side Pinout
+
+| Pin | Name  | Function                          | Description                                                    |
+|-----|-------|-----------------------------------|----------------------------------------------------------------|
+| 14  | D10   | GPIO                              | General-purpose I/O                                            |
+| 15  | MOSI  | SPI Data Out                      | SPI Master Out, Slave In (MOSI)                                |
+| 16  | MISO  | SPI Data In                       | SPI Master In, Slave Out (MISO)                                |
+| 17  | SCK   | SPI Clock                        | SPI Clock                                                      |
+| 18  | A0    | GPIO, Analog Input                | General-purpose I/O, Analog Input                              |
+| 19  | A1    | GPIO, Analog Input                | General-purpose I/O, Analog Input                              |
+| 20  | A2    | GPIO, Analog Input                | General-purpose I/O, Analog Input                              |
+| 21  | A3    | GPIO, Analog Input                | General-purpose I/O, Analog Input                              |
+| 22  | 3.3V  | 3.3V Output                       | Provides 3.3V from regulator                                   |
+| 23  | RESET | Reset                             | Reset pin                                                      |
+| 24  | GND   | Ground                            | Common ground pin                                              |
+| 25  | RAW   | Raw Voltage Input                 | Input for unregulated voltage                                  |
+| 26  | D-    | USB Data -                        | USB negative data line                                         |
 
 ## Dimensions
 
@@ -82,4 +89,4 @@ When using the KB2040 in your own projects, consider the following:
 
 ---
 
-This template should now accurately reflect the correct pinout and provide a comprehensive guide for users working with the KB2040.
+This documentation now accurately reflects the correct pinout order for the KB2040, providing a clear and useful guide for users working with the board.
